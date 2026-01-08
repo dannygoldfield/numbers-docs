@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Numbers Alpha Prototype Plan - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../ERROR-TAXONOMY/" class="nav-link">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../LIMITS-AND-CIRCUIT-BREAKERS/" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../STATE-MACHINE/" class="nav-link">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../TEST-VECTORS/" class="nav-link">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../UI-SPEC/" class="nav-link">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../WHY/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Daily-Log/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#numbers-alpha-prototype-plan" class="nav-link">Numbers Alpha Prototype Plan</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#sun-aug-24-8-hrs" class="nav-link">Sun Aug 24 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#mon-aug-25-8-hrs" class="nav-link">Mon Aug 25 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tue-aug-26-8-hrs" class="nav-link">Tue Aug 26 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#wed-aug-27-8-hrs" class="nav-link">Wed Aug 27 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#thu-aug-28-8-hrs" class="nav-link">Thu Aug 28 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fri-aug-29-8-hrs" class="nav-link">Fri Aug 29 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sat-aug-30-8-hrs" class="nav-link">Sat Aug 30 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#sun-aug-31-8-hrs" class="nav-link">Sun Aug 31 (8 hrs)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#deliverables-by-aug-31" class="nav-link">✅ Deliverables by Aug 31</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#compact-calendar-aug-2431" class="nav-link">Compact Calendar (Aug 24–31)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="numbers-alpha-prototype-plan">Numbers Alpha Prototype Plan</h1>
+<p><strong>Aug 24 – Aug 31, 2025 (8 days × 8 hrs = ~64 hrs)</strong><br />
+<strong>Target:</strong> Alpha v0.2.x checkpoint (roadmap: Testnet wallets + basic web UI)<br />
+<strong>Approach:</strong> Hell-bent focus, one major milestone per day.</p>
+<hr />
+<h2 id="sun-aug-24-8-hrs">Sun Aug 24 (8 hrs)</h2>
+<ul>
+<li><strong>Penpot wrap-up (5 hrs)</strong>  </li>
+<li>Complete <strong>State-0.1 → State-3</strong> (add State-4 only if trivial).  </li>
+<li>Export boards/screens.  </li>
+<li>Update <code>docs/DESIGN_NOTES.md</code>.  </li>
+<li><strong>Repo organization (3 hrs)</strong>  </li>
+<li>Open “Alpha” milestone in GitHub Issues.  </li>
+<li>Commit updated Penpot docs.  </li>
+</ul>
+<hr />
+<h2 id="mon-aug-25-8-hrs">Mon Aug 25 (8 hrs)</h2>
+<ul>
+<li><strong>Safety Net I</strong>  </li>
+<li>Install/configure <code>rustfmt</code>, <code>clippy</code>.  </li>
+<li>Run <code>cargo fmt</code>, <code>cargo clippy --fix</code>.  </li>
+<li>Add <code>ci.yml</code> (fmt, clippy, test) → debug until CI green.  </li>
+<li>Document in <code>docs/SAFETY_NET.md</code>.  </li>
+</ul>
+<hr />
+<h2 id="tue-aug-26-8-hrs">Tue Aug 26 (8 hrs)</h2>
+<ul>
+<li><strong>Safety Net II</strong>  </li>
+<li>Run <code>cargo doc</code>.  </li>
+<li>Initialize <code>mdBook</code> in <code>docs/</code>.  </li>
+<li>Write starter <code>PROJECT_BRIEF.md</code>.  </li>
+<li>Hook <code>mdBook build</code> into CI.  </li>
+<li>Push “Safety Net baseline” commit.  </li>
+</ul>
+<hr />
+<h2 id="wed-aug-27-8-hrs">Wed Aug 27 (8 hrs)</h2>
+<ul>
+<li><strong>Frontend shell</strong>  </li>
+<li>Scaffold Vite + Tailwind + TypeScript.  </li>
+<li>Add safe-area container + global tokens (colors, typography).  </li>
+<li>Render placeholder Header + AuctionCard + InputArea.  </li>
+</ul>
+<hr />
+<h2 id="thu-aug-28-8-hrs">Thu Aug 28 (8 hrs)</h2>
+<ul>
+<li><strong>Auction mock state</strong>  </li>
+<li>JSON object: number, countdown, bids.  </li>
+<li>Wire InputArea (BidEntry + Keyboard).  </li>
+<li>Show static 60-second countdown timer.  </li>
+</ul>
+<hr />
+<h2 id="fri-aug-29-8-hrs">Fri Aug 29 (8 hrs)</h2>
+<ul>
+<li><strong>Interactive bid flow</strong>  </li>
+<li>“Place Bid” updates mock state + UI.  </li>
+<li>Show highest bid.  </li>
+<li>Add micro-animations (orange button flash, fade transitions).  </li>
+</ul>
+<hr />
+<h2 id="sat-aug-30-8-hrs">Sat Aug 30 (8 hrs)</h2>
+<ul>
+<li><strong>Bitcoin Testnet integration I</strong>  </li>
+<li>Hook into Bitcoin Core RPC (<code>bitcoincore-rpc</code>).  </li>
+<li>List wallets + fetch Testnet address.  </li>
+<li>Replace mock wallet with real Testnet wallet.  </li>
+<li>Log bids to <code>results/inscription_index.json</code>.  </li>
+</ul>
+<hr />
+<h2 id="sun-aug-31-8-hrs">Sun Aug 31 (8 hrs)</h2>
+<ul>
+<li><strong>Bitcoin Testnet integration II + Demo</strong>  </li>
+<li>Drive countdown from state.  </li>
+<li>Auto-close auction after 60s.  </li>
+<li>Pick winner + log inscription result (mock txid).  </li>
+<li>Cross-device test (Safari iOS, Chrome Android).  </li>
+<li>Optimize build (Tailwind purge, bundle).  </li>
+<li>Internal Alpha demo: start auction → bid → close → log.  </li>
+</ul>
+<hr />
+<h2 id="deliverables-by-aug-31">✅ Deliverables by Aug 31</h2>
+<ul>
+<li><strong>Design:</strong> Penpot States 0–3 documented.  </li>
+<li><strong>Safety Net:</strong> fmt, clippy, CI, mdBook, project brief.  </li>
+<li><strong>Frontend:</strong> Shell running with InputArea, countdown, bid flow.  </li>
+<li><strong>Backend:</strong> Testnet wallet integration, JSON logging.  </li>
+<li><strong>Alpha Demo:</strong> End-to-end flow, demo-ready.  </li>
+</ul>
+<hr />
+<h1 id="compact-calendar-aug-2431">Compact Calendar (Aug 24–31)</h1>
+<pre><code>Sun 24 | Penpot finish → Repo org
+Mon 25 | Safety Net I (fmt, clippy, CI)
+Tue 26 | Safety Net II (docs, mdBook)
+Wed 27 | Frontend shell (Vite, Tailwind)
+Thu 28 | Auction mock state (JSON, countdown)
+Fri 29 | Interactive bid flow (Place Bid, animations)
+Sat 30 | Testnet integration I (RPC, wallet, log)
+Sun 31 | Testnet integration II + Alpha Demo
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

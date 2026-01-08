@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Limits and Circuit Breakers — Numbers - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ERROR-TAXONOMY/" class="nav-link">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE/" class="nav-link">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TEST-VECTORS/" class="nav-link">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../UI-SPEC/" class="nav-link">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../archive/Alpha-Build-Schedule/" class="dropdown-item">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../archive/README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../archive/WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../archive/mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../archive/rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../LAUNCH-CHECKLIST/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../NAMING-CONVENTION/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#limits-and-circuit-breakers-numbers" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#why-limits-exist" class="nav-link">Why Limits Exist</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#auction-caps" class="nav-link">Auction Caps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#minimum-valid-bid" class="nav-link">Minimum Valid Bid</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#initial-limits-subject-to-change" class="nav-link">Initial Limits (Subject to Change)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#circuit-breaker-philosophy" class="nav-link">Circuit Breaker Philosophy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#enforcement-points" class="nav-link">Enforcement Points</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#candidate-circuit-breakers" class="nav-link">Candidate Circuit Breakers</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#threshold-design-method" class="nav-link">Threshold Design Method</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#paused-state" class="nav-link">Paused State</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#manual-controls" class="nav-link">Manual Controls</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#logging-requirements" class="nav-link">Logging Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#design-principle" class="nav-link">Design Principle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#non-goals" class="nav-link">Non-Goals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="limits-and-circuit-breakers-numbers">Limits and Circuit Breakers — Numbers</h1>
+<p>This document defines the limits and circuit breaker framework governing Numbers.</p>
+<p>Limits exist to bound risk.<br />
+Circuit breakers exist to contain failure.</p>
+<p>They are safety mechanisms, not market features.</p>
+<p>Auction sequencing, integrity, and timing are prioritized over settlement success, payment timing, and inscription cost efficiency.</p>
+<hr />
+<h2 id="why-limits-exist">Why Limits Exist</h2>
+<p>Numbers operates in an adversarial and failure-prone environment.</p>
+<p>Failures may arise from:
+- software bugs
+- wallet or node misconfiguration
+- automated or malicious behavior
+- unexpected fee spikes
+- partial outages or degraded dependencies</p>
+<p>Limits exist to ensure that no single auction, transaction, or failure mode can create unbounded financial or operational exposure.</p>
+<p>The goal is not to prevent failure.<br />
+The goal is to <strong>bound the impact of failure</strong>.</p>
+<p>Limits in Numbers take two forms:
+- hard caps that bound exposure
+- circuit breakers that constrain behavior under adverse conditions</p>
+<hr />
+<h2 id="auction-caps">Auction Caps</h2>
+<p>Unlike circuit breakers, caps are unconditional and always enforced.</p>
+<p>Caps are expected to rise over time.
+In normal operation, the cap should rarely, if ever, be reached.
+Its purpose is to define a hard upper bound on exposure, not to influence typical bidding behavior.</p>
+<p>Each auction enforces a <strong>maximum bid cap</strong>.</p>
+<p>The cap bounds the system’s financial exposure per auction.
+It exists to prevent a single auction from creating obligations the system cannot safely complete.</p>
+<p>This protection applies regardless of intent.
+It defends equally against bugs, automation errors, and adversarial behavior.</p>
+<p>When the cap is reached:</p>
+<ul>
+<li>The auction resolves immediately at the moment the cap is reached</li>
+<li>No further bids are accepted</li>
+<li>The resolution is final and recorded</li>
+<li>Settlement proceeds as normal</li>
+</ul>
+<p>Resolution via bid cap is a valid close condition.
+It does not reopen or extend the auction.</p>
+<p>After resolution:</p>
+<ul>
+<li>Settlement proceeds asynchronously</li>
+<li>An inter-auction pause may occur if configured</li>
+<li>The next auction begins normally</li>
+</ul>
+<p>Caps exist to:</p>
+<ul>
+<li>Bound worst-case financial exposure per auction</li>
+<li>Limit the blast radius of faults or abuse</li>
+<li>Preserve system liveness under unexpected conditions</li>
+<li>Ensure failures remain local rather than systemic</li>
+</ul>
+<hr />
+<h2 id="minimum-valid-bid">Minimum Valid Bid</h2>
+<p>Each auction enforces a <strong>minimum valid bid</strong>.</p>
+<p>The minimum valid bid exists to prevent dust settlements, spam, and operational abuse.
+It is a technical hygiene rule, not a valuation signal.</p>
+<p>The minimum valid bid:
+- is computed at auction start
+- remains fixed for the duration of that auction
+- may be derived from current network fee conditions with a fixed floor</p>
+<p>Bids below the minimum valid bid are rejected.</p>
+<p>Failure to meet the minimum valid bid does not alter auction sequencing.
+If no valid bids are received, the auction resolves normally.</p>
+<hr />
+<h2 id="initial-limits-subject-to-change">Initial Limits (Subject to Change)</h2>
+<p>Initial values are intentionally conservative.</p>
+<ul>
+<li>Max bid per auction: TBD</li>
+<li>Max auctions per day: TBD</li>
+<li>Max concurrent pending settlements: TBD</li>
+<li>Max concurrent pending inscriptions: TBD</li>
+</ul>
+<p>These limits apply globally across the running system.</p>
+<p>Limits may be increased without interruption.
+Limits may only be reduced at an auction boundary to avoid invalidating in-flight work.</p>
+<hr />
+<h2 id="circuit-breaker-philosophy">Circuit Breaker Philosophy</h2>
+<p>Circuit breakers protect the system under adverse conditions.
+Circuit breakers may degrade behavior without entering a paused state.</p>
+<p>They are designed to keep auctions as independent as possible from:
+- payment success
+- settlement timing
+- inscription cost or confirmation speed</p>
+<p>Default rules:</p>
+<ul>
+<li>Never interrupt an open auction</li>
+<li>Prefer degrading downstream processes over stopping the sequence</li>
+<li>Avoid rewriting outcomes or timelines</li>
+</ul>
+<p>Circuit breakers do not correct failures.<br />
+They contain them.</p>
+<hr />
+<h2 id="enforcement-points">Enforcement Points</h2>
+<p>Circuit breakers may act only at the following points, listed in order of preference:</p>
+<ol>
+<li><strong>Inscription policy</strong></li>
+<li>defer broadcast</li>
+<li>use lower fee modes</li>
+<li>
+<p>queue work</p>
+</li>
+<li>
+<p><strong>Settlement handling</strong></p>
+</li>
+<li>allow deadlines to expire naturally</li>
+<li>
+<p>finalize to NullSteward when required</p>
+</li>
+<li>
+<p><strong>Bid intake</strong></p>
+</li>
+<li>temporarily disable new bids</li>
+<li>
+<p>expose degraded status in UI</p>
+</li>
+<li>
+<p><strong>Auction boundary</strong></p>
+</li>
+<li>prevent the start of the next auction</li>
+</ol>
+<p>An open auction is never paused, altered, or invalidated.</p>
+<hr />
+<h2 id="candidate-circuit-breakers">Candidate Circuit Breakers</h2>
+<p>The following breakers define the system’s safety envelope.
+They describe <em>what is monitored</em> and <em>where protection may be applied</em>.
+They do not hardcode final thresholds.</p>
+<table>
+<thead>
+<tr>
+<th>Breaker</th>
+<th>Protects</th>
+<th>Signal</th>
+<th>Typical enforcement point</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fee pressure</td>
+<td>Cost exposure</td>
+<td>Fee rate (sat/vB)</td>
+<td>Inscription policy</td>
+<td>Auctions continue regardless of fees</td>
+</tr>
+<tr>
+<td>Node lag</td>
+<td>State correctness</td>
+<td>headers − blocks, IBD</td>
+<td>Bid intake, UI</td>
+<td>Avoid bidding on stale state</td>
+</tr>
+<tr>
+<td>Wallet low</td>
+<td>Completion ability</td>
+<td>available sats, reserved sats</td>
+<td>Inscription policy</td>
+<td>Auctions may outpace wallet</td>
+</tr>
+<tr>
+<td>Error rate</td>
+<td>System integrity</td>
+<td>errors per unit time</td>
+<td>Bid intake, auction boundary</td>
+<td>Storage errors fail fast</td>
+</tr>
+<tr>
+<td>Backlog growth</td>
+<td>Operational bounds</td>
+<td>pending count, oldest age</td>
+<td>Inscription policy</td>
+<td>Defines safe operating envelope</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="threshold-design-method">Threshold Design Method</h2>
+<p>Thresholds are chosen deliberately.
+They reflect cost tolerance, risk posture, and operational maturity.</p>
+<p>For each breaker:</p>
+<h3 id="1-define-the-worst-case">1. Define the worst case</h3>
+<p>State explicitly:</p>
+<blockquote>
+<p>“If this goes wrong, the worst plausible outcome is ______.”</p>
+</blockquote>
+<p>Examples:
+- unbounded fee spend
+- accepting bids on stale chain state
+- inscriptions stalled due to insufficient funds
+- compounding backlog growth</p>
+<hr />
+<h3 id="2-choose-a-threshold-class">2. Choose a threshold class</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Absolute</td>
+<td>fixed numeric ceiling or floor</td>
+</tr>
+<tr>
+<td>Relative</td>
+<td>percentage over baseline</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>queue depth or age</td>
+</tr>
+<tr>
+<td>Rate</td>
+<td>events per unit time</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="3-add-hysteresis">3. Add hysteresis</h3>
+<p>Every breaker must define:</p>
+<ul>
+<li>a <strong>trip condition</strong></li>
+<li>a <strong>clear condition</strong> that is stricter than the trip</li>
+</ul>
+<p>This prevents oscillation and flapping.</p>
+<hr />
+<h2 id="paused-state">Paused State</h2>
+<p>A paused state is distinct from the normal inter-auction pause.</p>
+<p>A paused state may occur only between auctions.</p>
+<p>When paused:</p>
+<ul>
+<li>No new auctions begin</li>
+<li>No bids are accepted</li>
+<li>Existing auctions resolve normally</li>
+<li>Settlement and inscription may continue or drain safely</li>
+<li>UI reflects paused status and cause</li>
+</ul>
+<p>Paused state does not alter past outcomes.</p>
+<hr />
+<h2 id="manual-controls">Manual Controls</h2>
+<ul>
+<li>Operator may manually pause the system between auctions</li>
+<li>Manual resume requires confirmation that blocking conditions are cleared</li>
+<li>All manual actions are durably logged with timestamp and reason</li>
+</ul>
+<p>Manual controls cannot reopen or alter resolved auctions.</p>
+<hr />
+<h2 id="logging-requirements">Logging Requirements</h2>
+<p>All breaker evaluations must record:</p>
+<ul>
+<li>breaker name</li>
+<li>observed signal values</li>
+<li>threshold values</li>
+<li>enforcement state</li>
+<li>timestamp</li>
+</ul>
+<p>Pause and resume events are immutable records.</p>
+<hr />
+<h2 id="design-principle">Design Principle</h2>
+<p>Limits are features.</p>
+<p>They protect users.<br />
+They protect operators.<br />
+They protect the integrity of the sequence.</p>
+<p>Safety mechanisms must never rewrite history.</p>
+<hr />
+<h2 id="non-goals">Non-Goals</h2>
+<p>Limits and circuit breakers are not intended to:
+- shape bidding behavior
+- enforce fairness or price discovery
+- optimize market outcomes</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

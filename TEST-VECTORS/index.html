@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Test Vectors — Numbers - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ERROR-TAXONOMY/" class="nav-link">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LIMITS-AND-CIRCUIT-BREAKERS/" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE/" class="nav-link">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../UI-SPEC/" class="nav-link">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../archive/Alpha-Build-Schedule/" class="dropdown-item">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../archive/README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../archive/WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../archive/mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../archive/rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../TARGET-AUDIENCE/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../TESTING/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#test-vectors-numbers" class="nav-link">Test Vectors — Numbers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-purpose" class="nav-link">1. Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-structure-of-a-test-vector" class="nav-link">2. Structure of a Test Vector</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-vector-bid-below-minimum" class="nav-link">3. Vector — Bid Below Minimum</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-vector-auction-closes-without-bids" class="nav-link">4. Vector — Auction Closes Without Bids</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-vector-winning-bid-settlement-pending" class="nav-link">5. Vector — Winning Bid, Settlement Pending</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-vector-settlement-deadline-expires" class="nav-link">6. Vector — Settlement Deadline Expires</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-vector-inscription-broadcast-ambiguity" class="nav-link">7. Vector — Inscription Broadcast Ambiguity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-vector-observed-inscription-after-ambiguity" class="nav-link">8. Vector — Observed Inscription After Ambiguity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-vector-invalid-state-transition" class="nav-link">9. Vector — Invalid State Transition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-vector-operator-pause-mid-auction" class="nav-link">10. Vector — Operator Pause Mid-Auction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-general-invariants-verified" class="nav-link">11. General Invariants Verified</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-final-rule" class="nav-link">12. Final Rule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="test-vectors-numbers">Test Vectors — Numbers</h1>
+<p>This document defines canonical test vectors for Numbers.</p>
+<p>It is illustrative but binding.</p>
+<p>Each vector represents a concrete scenario that must be handled exactly as described.
+Implementations must produce the same state transitions, outputs, and prohibitions.</p>
+<p>If a test vector conflicts with:
+- STATE-MACHINE.md
+- API-STATE-SHAPES.md
+- ERROR-TAXONOMY.md</p>
+<p>Those documents take precedence.</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>Test vectors exist to:</p>
+<ul>
+<li>Lock system behavior</li>
+<li>Prevent regression</li>
+<li>Prevent interpretation drift</li>
+<li>Serve as fixtures for automated testing</li>
+<li>Serve as grounding examples for humans and LLMs</li>
+</ul>
+<p>A test vector is not a suggestion.
+It defines a required outcome.</p>
+<hr />
+<h2 id="2-structure-of-a-test-vector">2. Structure of a Test Vector</h2>
+<p>Each test vector must include the following sections:</p>
+<ul>
+<li>Initial State  </li>
+<li>Triggering Action  </li>
+<li>Observed Events (if any)  </li>
+<li>Expected Resulting State  </li>
+<li>Error Classification (if applicable)  </li>
+<li>Forbidden Actions  </li>
+</ul>
+<p>Omitting any section is not permitted.</p>
+<hr />
+<h2 id="3-vector-bid-below-minimum">3. Vector — Bid Below Minimum</h2>
+<h3 id="initial-state">Initial State</h3>
+<p>Auction is open and has an existing high bid.</p>
+<p>Auction is open.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_001&quot;,
+  &quot;state&quot;: &quot;Open&quot;,
+  &quot;current_high_bid&quot;: 10000,
+  &quot;bid_count&quot;: 1
+}
+</code></pre>
+<h3 id="triggering-action">Triggering Action</h3>
+<p>Describe the bid submission.</p>
+<pre><code class="language-json">{
+  &quot;bid_id&quot;: &quot;bid_001&quot;,
+  &quot;auction_id&quot;: &quot;auc_001&quot;,
+  &quot;amount&quot;: 9000
+}
+</code></pre>
+<h3 id="observed-events">Observed Events</h3>
+<p>Describe any internal or external observations.
+- Bid validation runs
+- Bid is rejected before persistence</p>
+<h3 id="expected-resulting-state">Expected Resulting State</h3>
+<p>Describe the state after handling the bid. Auction state is unchanged.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_001&quot;,
+  &quot;state&quot;: &quot;Open&quot;,
+  &quot;current_high_bid&quot;: 10000,
+  &quot;bid_count&quot;: 1
+}
+</code></pre>
+<h3 id="error-classification">Error Classification</h3>
+<p>Specify the error class from ERROR-TAXONOMY.md. Deterministic Error.</p>
+<h3 id="forbidden-actions">Forbidden Actions</h3>
+<p>List actions the system must not take.
+- Persisting the bid
+- Updating bid count
+- Updating current high bid
+- Advancing auction state</p>
+<hr />
+<h2 id="4-vector-auction-closes-without-bids">4. Vector — Auction Closes Without Bids</h2>
+<h3 id="initial-state_1">Initial State</h3>
+<p>Auction is open with zero bids.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_002&quot;,
+  &quot;state&quot;: &quot;Open&quot;,
+  &quot;bid_count&quot;: 0
+}
+</code></pre>
+<h3 id="triggering-action_1">Triggering Action</h3>
+<p>Auction end time is reached.</p>
+<h3 id="observed-events_1">Observed Events</h3>
+<p>Clock advancement or scheduler trigger.
+- Scheduler observes end_time</p>
+<h3 id="expected-resulting-state_1">Expected Resulting State</h3>
+<p>Auction finalizes with no settlement required.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_002&quot;,
+  &quot;state&quot;: &quot;Finalized&quot;,
+  &quot;bid_count&quot;: 0
+}
+</code></pre>
+<h3 id="forbidden-actions_1">Forbidden Actions</h3>
+<p>List all prohibited behaviors.
+- Creating a resolution with a winner
+- Entering settlement
+- Attempting inscription</p>
+<hr />
+<h2 id="5-vector-winning-bid-settlement-pending">5. Vector — Winning Bid, Settlement Pending</h2>
+<h3 id="initial-state_2">Initial State</h3>
+<p>Auction has closed with at least one valid bid.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_003&quot;,
+  &quot;state&quot;: &quot;Closed&quot;,
+  &quot;current_high_bid&quot;: 15000,
+  &quot;bid_count&quot;: 3
+}
+</code></pre>
+<h3 id="triggering-action_2">Triggering Action</h3>
+<p>Resolution process executes.</p>
+<h3 id="observed-events_2">Observed Events</h3>
+<p>Resolution record is written</p>
+<h3 id="expected-resulting-state_2">Expected Resulting State</h3>
+<p>Settlement enters pending state.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_003&quot;,
+  &quot;settlement_status&quot;: &quot;pending&quot;
+}
+</code></pre>
+<h3 id="forbidden-actions_2">Forbidden Actions</h3>
+<p>List prohibited actions prior to settlement completion.
+- Inscription attempt before settlement
+- Accepting new bids
+- Reopening auction</p>
+<hr />
+<h2 id="6-vector-settlement-deadline-expires">6. Vector — Settlement Deadline Expires</h2>
+<h3 id="initial-state_3">Initial State</h3>
+<p>Settlement pending with deadline set.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_003&quot;,
+  &quot;settlement_status&quot;: &quot;pending&quot;,
+  &quot;deadline&quot;: &quot;2026-01-01T00:10:00Z&quot;
+}
+</code></pre>
+<h3 id="triggering-action_3">Triggering Action</h3>
+<p>Deadline passes without payment.</p>
+<h3 id="observed-events_3">Observed Events</h3>
+<p>Time observation only.</p>
+<h3 id="expected-resulting-state_3">Expected Resulting State</h3>
+<p>Settlement expires and destination becomes null steward.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_003&quot;,
+  &quot;settlement_status&quot;: &quot;expired&quot;,
+  &quot;destination&quot;: &quot;null_steward&quot;
+}
+</code></pre>
+<h3 id="forbidden-actions_3">Forbidden Actions</h3>
+<ul>
+<li>Accepting late payment</li>
+<li>Reopening settlement</li>
+<li>Assigning ownership</li>
+</ul>
+<hr />
+<h2 id="7-vector-inscription-broadcast-ambiguity">7. Vector — Inscription Broadcast Ambiguity</h2>
+<h3 id="initial-state_4">Initial State</h3>
+<p>Settlement completed. No inscription attempt yet.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_004&quot;,
+  &quot;inscription_state&quot;: &quot;none&quot;
+}
+</code></pre>
+<h3 id="triggering-action_4">Triggering Action</h3>
+<p>Inscription broadcast is attempted.</p>
+<h3 id="observed-events_4">Observed Events</h3>
+<ul>
+<li>Process crashes immediately after broadcast attempt</li>
+<li>No txid is persisted</li>
+</ul>
+<h3 id="expected-resulting-state_4">Expected Resulting State</h3>
+<p>Inscription state becomes ambiguous.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_004&quot;,
+  &quot;inscription_state&quot;: &quot;ambiguous&quot;
+}
+</code></pre>
+<h3 id="error-classification_1">Error Classification</h3>
+<p>Ambiguous Error.</p>
+<h3 id="forbidden-actions_4">Forbidden Actions</h3>
+<ul>
+<li>Retrying broadcast</li>
+<li>Broadcasting a replacement transaction</li>
+<li>Marking inscription as failed</li>
+</ul>
+<hr />
+<h2 id="8-vector-observed-inscription-after-ambiguity">8. Vector — Observed Inscription After Ambiguity</h2>
+<h3 id="initial-state_5">Initial State</h3>
+<p>Inscription state is ambiguous.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_004&quot;,
+  &quot;inscription_state&quot;: &quot;ambiguous&quot;
+}
+</code></pre>
+<h3 id="triggering-action_5">Triggering Action</h3>
+<p>Network observation detects confirmed inscription.</p>
+<h3 id="observed-events_5">Observed Events</h3>
+<p>External observation confirms inscription.</p>
+<h3 id="expected-resulting-state_5">Expected Resulting State</h3>
+<p>Inscription state updates to inscribed.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_004&quot;,
+  &quot;inscription_state&quot;: &quot;inscribed&quot;
+}
+</code></pre>
+<h3 id="forbidden-actions_5">Forbidden Actions</h3>
+<p>Any action implying ambiguity was resolved by retry.
+- Claiming retry success
+- Performing any additional broadcast
+- Rewriting history</p>
+<hr />
+<h2 id="9-vector-invalid-state-transition">9. Vector — Invalid State Transition</h2>
+<h3 id="initial-state_6">Initial State</h3>
+<p>Auction is finalized.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_005&quot;,
+  &quot;state&quot;: &quot;Finalized&quot;
+}
+</code></pre>
+<h3 id="triggering-action_6">Triggering Action</h3>
+<p>System attempts an invalid transition.</p>
+<h3 id="observed-events_6">Observed Events</h3>
+<ul>
+<li>Invariant violation detected.</li>
+<li>State machine violation detected</li>
+</ul>
+<h3 id="expected-resulting-state_6">Expected Resulting State</h3>
+<p>Process halts immediately.</p>
+<h3 id="error-classification_2">Error Classification</h3>
+<p>Fatal Error.</p>
+<h3 id="forbidden-actions_6">Forbidden Actions</h3>
+<ul>
+<li>Continuing execution</li>
+<li>Auto-correcting state</li>
+<li>Silently ignoring the violation</li>
+</ul>
+<hr />
+<h2 id="10-vector-operator-pause-mid-auction">10. Vector — Operator Pause Mid-Auction</h2>
+<h3 id="initial-state_7">Initial State</h3>
+<p>Auction is open and accepting bids.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_006&quot;,
+  &quot;state&quot;: &quot;Open&quot;
+}
+</code></pre>
+<h3 id="triggering-action_7">Triggering Action</h3>
+<p>Operator initiates pause.</p>
+<h3 id="observed-events_7">Observed Events</h3>
+<p>Pause state recorded.</p>
+<h3 id="expected-resulting-state_7">Expected Resulting State</h3>
+<p>Auction remains open but blocked.</p>
+<pre><code class="language-json">{
+  &quot;auction_id&quot;: &quot;auc_006&quot;,
+  &quot;state&quot;: &quot;Open&quot;,
+  &quot;pause_blocked&quot;: true
+}
+</code></pre>
+<h3 id="forbidden-actions_7">Forbidden Actions</h3>
+<ul>
+<li>Advancing time-based state</li>
+<li>Auto-finalizing auction</li>
+<li>Accepting bids during pause</li>
+</ul>
+<hr />
+<h2 id="11-general-invariants-verified">11. General Invariants Verified</h2>
+<p>This section lists invariants implicitly verified by all vectors, such as:</p>
+<ul>
+<li>No authority recovery after ambiguity</li>
+<li>No time-based certainty</li>
+<li>No hidden retries</li>
+<li>No inferred ownership</li>
+<li>No silent failure</li>
+</ul>
+<hr />
+<h2 id="12-final-rule">12. Final Rule</h2>
+<p>If implementation behavior differs from a test vector:</p>
+<p>The implementation is wrong.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

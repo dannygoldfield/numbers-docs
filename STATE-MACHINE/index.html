@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>State Machine — Numbers - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ERROR-TAXONOMY/" class="nav-link">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LIMITS-AND-CIRCUIT-BREAKERS/" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TEST-VECTORS/" class="nav-link">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../UI-SPEC/" class="nav-link">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../archive/Alpha-Build-Schedule/" class="dropdown-item">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../archive/README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../archive/WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../archive/mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../archive/rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../STATE-MACHINE-TABLE/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../SUMMARY/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#state-machine-numbers" class="nav-link">State Machine — Numbers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-scope" class="nav-link">1. Scope</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-state-model" class="nav-link">2. State Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-auction-state-machine" class="nav-link">3. Auction State Machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-auction-state-definitions" class="nav-link">4. Auction State Definitions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-auction-state-transition-table" class="nav-link">5. Auction State Transition Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-illegal-transitions" class="nav-link">6. Illegal Transitions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-restart-semantics" class="nav-link">7. Restart Semantics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-system-control-state-machine" class="nav-link">8. System Control State Machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-invariants-enforced-by-this-state-machine" class="nav-link">9. Invariants Enforced by This State Machine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-design-notes" class="nav-link">10. Design Notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-open-assumptions" class="nav-link">11. Open Assumptions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="state-machine-numbers">State Machine — Numbers</h1>
+<p>This document defines the executable state machine for Numbers.</p>
+<p>It specifies:
+1. All valid states
+2. All allowed transitions
+3. Transition triggers and side effects
+4. Persistence requirements
+5. Restart semantics
+6. Pause semantics
+7. Illegal transitions
+8. Authority loss rules</p>
+<p>If behavior is not permitted here, it is forbidden.</p>
+<p>This document is normative.
+If there is a conflict, CORE-SEQUENCE.md and PRD.md take precedence.</p>
+<hr />
+<h2 id="1-scope">1. Scope</h2>
+<p>This state machine governs:</p>
+<ul>
+<li>The auction lifecycle for a single number N</li>
+<li>System-level pause behavior at auction boundaries</li>
+</ul>
+<p>It does not govern:
+- UI presentation
+- Wallet internals
+- Bitcoin confirmation mechanics beyond required thresholds</p>
+<hr />
+<h2 id="2-state-model">2. State Model</h2>
+<p>The system operates two coupled state machines:</p>
+<ol>
+<li>Auction State Machine (per number)</li>
+<li>System Control State Machine (global)</li>
+</ol>
+<p>They interact only at explicitly defined boundaries.</p>
+<hr />
+<h2 id="3-auction-state-machine">3. Auction State Machine</h2>
+<p>Each auction number N progresses through the following states exactly once and in order.</p>
+<h3 id="31-auction-states">3.1 Auction States</h3>
+<ol>
+<li><code>Scheduled</code></li>
+<li><code>Open</code></li>
+<li><code>Closed</code></li>
+<li><code>AwaitingSettlement</code></li>
+<li><code>Finalized</code></li>
+<li><code>Inscribing</code></li>
+<li><code>Inscribed</code></li>
+</ol>
+<p>There are no other valid auction states.</p>
+<hr />
+<h2 id="4-auction-state-definitions">4. Auction State Definitions</h2>
+<h3 id="41-scheduled">4.1 Scheduled</h3>
+<p><strong>Meaning</strong><br />
+Auction N exists but is not yet accepting bids.</p>
+<p><strong>Entry conditions</strong>
+- Auction N−1 has advanced
+- Inter-auction gap timer is active</p>
+<p><strong>Allowed actions</strong>
+- No bids accepted
+- Auction timer visible but inactive</p>
+<p><strong>Persistence</strong>
+- Auction record exists
+- Start and end times recorded</p>
+<p><strong>Exit trigger</strong>
+- Inter-auction gap expires
+- System is not paused</p>
+<hr />
+<h3 id="42-open">4.2 Open</h3>
+<p><strong>Meaning</strong><br />
+Auction N is actively accepting bids.</p>
+<p><strong>Entry conditions</strong>
+- Inter-auction gap has expired
+- System state is <code>Running</code></p>
+<p><strong>Allowed actions</strong>
+- Accept valid bids
+- Reject invalid bids</p>
+<p><strong>Persistence</strong>
+- Bid records appended
+- Auction open timestamp recorded</p>
+<p><strong>Exit triggers</strong><br />
+Exactly one of:
+1. Auction duration expires
+2. Auction bid cap is reached</p>
+<hr />
+<h3 id="43-closed">4.3 Closed</h3>
+<p><strong>Meaning</strong><br />
+Auction N is closed to new bids and resolving.</p>
+<p><strong>Entry conditions</strong>
+- Open auction exit trigger fires</p>
+<p><strong>Allowed actions</strong>
+- Determine winning bid if any
+- Record resolution outcome</p>
+<p><strong>Persistence</strong>
+- Resolution record written exactly once</p>
+<p><strong>Exit trigger</strong>
+- Resolution computation completes</p>
+<p><strong>Idempotence rule</strong><br />
+If re-entered after restart, resolution must not be recomputed.</p>
+<hr />
+<h3 id="44-awaitingsettlement">4.4 AwaitingSettlement</h3>
+<p><strong>Meaning</strong><br />
+Auction N has resolved, but settlement has not yet finalized.</p>
+<p><strong>Entry conditions</strong>
+- Resolution record exists</p>
+<p><strong>Allowed actions</strong>
+- Await settlement confirmation
+- Track settlement deadline</p>
+<p><strong>Persistence</strong>
+- Settlement intent recorded
+- Settlement deadline recorded</p>
+<p><strong>Exit triggers</strong><br />
+Exactly one of:
+1. Winning bidder settles before deadline
+2. Settlement deadline expires
+3. No bids were present</p>
+<hr />
+<h3 id="45-finalized">4.5 Finalized</h3>
+<p><strong>Meaning</strong><br />
+Auction N has a final destination.</p>
+<p><strong>Entry conditions</strong>
+- Settlement success or failure determined</p>
+<p><strong>Final destinations</strong>
+- Winning bidder address
+- Null steward address</p>
+<p><strong>Persistence</strong>
+- Finalization record written
+- Destination address recorded</p>
+<p><strong>Exit trigger</strong>
+- Inscription process initiated</p>
+<p>Finalization is irreversible.</p>
+<hr />
+<h3 id="46-inscribing">4.6 Inscribing</h3>
+<p><strong>Meaning</strong><br />
+The canonical inscription for auction N is being constructed or has been broadcast.</p>
+<p><strong>Entry conditions</strong>
+- Auction N is finalized
+- Required wallet resources are reserved</p>
+<p><strong>Allowed actions</strong>
+- Construct inscription payload
+- Select UTXO
+- Sign transaction
+- Attempt broadcast</p>
+<p><strong>Persistence</strong>
+- Inscription attempt recorded
+- Txid recorded if known</p>
+<hr />
+<h4 id="authority-loss-rules-normative">Authority Loss Rules (Normative)</h4>
+<p>Inscribing encompasses two distinct phases:</p>
+<p><strong>1. Pre-broadcast failure (safe)</strong>
+- Transaction construction or signing fails
+- No transaction has been submitted to the network
+- Retry is permitted</p>
+<p><strong>2. Post-broadcast ambiguity (unsafe)</strong>
+- A transaction may have been broadcast
+- Its fate cannot be determined with certainty
+- The system must assume it may exist</p>
+<p>Once post-broadcast ambiguity exists:</p>
+<ul>
+<li>Authority to create a competing inscription is permanently lost</li>
+<li>No retry, replacement, or override is permitted</li>
+<li>Time passing does not restore permission</li>
+<li>Observation is the only allowed action</li>
+</ul>
+<p>Inscribing may persist indefinitely in this condition.</p>
+<hr />
+<h3 id="47-inscribed">4.7 Inscribed</h3>
+<p><strong>Meaning</strong><br />
+The canonical inscription for auction N is complete and known.</p>
+<p><strong>Entry conditions</strong>
+- Inscription transaction is observed and accepted</p>
+<p><strong>Persistence</strong>
+- Txid recorded
+- Satpoint recorded
+- Canonical flag set</p>
+<p>This is a terminal state.</p>
+<hr />
+<h2 id="5-auction-state-transition-table">5. Auction State Transition Table</h2>
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>Trigger</th>
+<th>Persistence Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scheduled</td>
+<td>Open</td>
+<td>Inter-auction gap expires</td>
+<td>Auction start time</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Closed</td>
+<td>Duration expires or cap reached</td>
+<td>Close timestamp</td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>AwaitingSettlement</td>
+<td>Resolution written</td>
+<td>Resolution record</td>
+</tr>
+<tr>
+<td>AwaitingSettlement</td>
+<td>Finalized</td>
+<td>Settlement success</td>
+<td>Finalization record</td>
+</tr>
+<tr>
+<td>AwaitingSettlement</td>
+<td>Finalized</td>
+<td>Settlement failure or no bids</td>
+<td>Finalization record</td>
+</tr>
+<tr>
+<td>Finalized</td>
+<td>Inscribing</td>
+<td>Inscription initiated</td>
+<td>Inscription intent</td>
+</tr>
+<tr>
+<td>Inscribing</td>
+<td>Inscribed</td>
+<td>Inscription observed</td>
+<td>Txid and satpoint</td>
+</tr>
+</tbody>
+</table>
+<p>No other transitions are valid.</p>
+<hr />
+<h2 id="6-illegal-transitions">6. Illegal Transitions</h2>
+<p>The following transitions are explicitly forbidden:</p>
+<ul>
+<li>Open → Scheduled</li>
+<li>Closed → Open</li>
+<li>AwaitingSettlement → Open</li>
+<li>Finalized → AwaitingSettlement</li>
+<li>Inscribed → any other state</li>
+<li>Any transition that reopens bidding</li>
+<li>Any competing inscription attempt after ambiguity</li>
+</ul>
+<p>Illegal transitions must trigger a fatal error and require operator intervention.</p>
+<hr />
+<h2 id="7-restart-semantics">7. Restart Semantics</h2>
+<p>On process restart:</p>
+<ol>
+<li>Load the latest persisted state for each auction</li>
+<li>Resume from the recorded state</li>
+<li>Never recompute resolution or finalization</li>
+</ol>
+<p>Restart behavior by state:</p>
+<ul>
+<li>
+<p><strong>Scheduled</strong><br />
+  Resume inter-auction timer</p>
+</li>
+<li>
+<p><strong>Open</strong><br />
+  Resume bidding if end time not passed<br />
+  Otherwise transition to <code>Closed</code></p>
+</li>
+<li>
+<p><strong>Closed</strong><br />
+  Do not recompute resolution<br />
+  Proceed to <code>AwaitingSettlement</code></p>
+</li>
+<li>
+<p><strong>AwaitingSettlement</strong><br />
+  Resume settlement monitoring</p>
+</li>
+<li>
+<p><strong>Finalized</strong><br />
+  Resume inscription process</p>
+</li>
+<li>
+<p><strong>Inscribing</strong><br />
+  If pre-broadcast failure is known, retry is permitted<br />
+  If post-broadcast ambiguity exists, do not retry<br />
+  Observe only</p>
+</li>
+<li>
+<p><strong>Inscribed</strong><br />
+  No action</p>
+</li>
+</ul>
+<hr />
+<h2 id="8-system-control-state-machine">8. System Control State Machine</h2>
+<h3 id="81-system-states">8.1 System States</h3>
+<ol>
+<li><code>Running</code></li>
+<li><code>Paused</code></li>
+</ol>
+<hr />
+<h3 id="82-pause-rules">8.2 Pause Rules</h3>
+<ul>
+<li>The system may enter <code>Paused</code> only at auction boundaries</li>
+<li>An open auction must never be interrupted</li>
+<li>Pausing prevents transition from <code>Scheduled</code> → <code>Open</code></li>
+<li>Pausing does not affect settlement or inscription</li>
+</ul>
+<p>Pause events are durably recorded with timestamp and reason.</p>
+<hr />
+<h3 id="83-resume-rules">8.3 Resume Rules</h3>
+<ul>
+<li>Resume requires explicit operator action</li>
+<li>Resume is allowed only when system state is internally consistent</li>
+<li>Resume transitions system to <code>Running</code></li>
+</ul>
+<hr />
+<h2 id="9-invariants-enforced-by-this-state-machine">9. Invariants Enforced by This State Machine</h2>
+<ol>
+<li>Each auction resolves exactly once</li>
+<li>Each auction finalizes exactly once</li>
+<li>Each auction produces at most one canonical inscription</li>
+<li>Auctions advance monotonically</li>
+<li>Bidding never reopens</li>
+<li>Past states are immutable</li>
+<li>Ambiguity does not grant permission to retry</li>
+</ol>
+<p>Violation of any invariant is a fatal system error.</p>
+<hr />
+<h2 id="10-design-notes">10. Design Notes</h2>
+<ul>
+<li>Absence of bids is a valid outcome</li>
+<li>Failure is treated as outcome, not exception</li>
+<li>Progression is prioritized over optimization</li>
+<li>Time passing does not restore authority</li>
+<li>Certainty is recorded; uncertainty is preserved</li>
+</ul>
+<hr />
+<h2 id="11-open-assumptions">11. Open Assumptions</h2>
+<p>The following assumptions are external and must be defined elsewhere:</p>
+<ol>
+<li>Confirmation depth required for settlement</li>
+<li>Fee selection and inscription retry policy before broadcast</li>
+<li>External observation mechanisms for inscription detection</li>
+</ol>
+<p>If any assumption changes, this document must be revised before implementation.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

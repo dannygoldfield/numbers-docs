@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Error Taxonomy — Numbers - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LIMITS-AND-CIRCUIT-BREAKERS/" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE/" class="nav-link">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TEST-VECTORS/" class="nav-link">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../UI-SPEC/" class="nav-link">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../archive/Alpha-Build-Schedule/" class="dropdown-item">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../archive/README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../archive/WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../archive/mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../archive/rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../FAQ/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#error-taxonomy-numbers" class="nav-link">Error Taxonomy — Numbers</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-purpose" class="nav-link">1. Purpose</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-error-classes" class="nav-link">2. Error Classes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-deterministic-errors" class="nav-link">3. Deterministic Errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-recoverable-errors" class="nav-link">4. Recoverable Errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-ambiguous-errors-critical" class="nav-link">5. Ambiguous Errors (Critical)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-fatal-errors" class="nav-link">6. Fatal Errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-operator-errors" class="nav-link">7. Operator Errors</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-error-escalation-rules" class="nav-link">8. Error Escalation Rules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-logging-requirements" class="nav-link">9. Logging Requirements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-design-principles" class="nav-link">10. Design Principles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-summary-table" class="nav-link">11. Summary Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-non-goals" class="nav-link">12. Non-Goals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#13-final-rule" class="nav-link">13. Final Rule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="error-taxonomy-numbers">Error Taxonomy — Numbers</h1>
+<p>This document defines how errors are classified and handled in Numbers.</p>
+<p>It is normative.</p>
+<p>Every error encountered by the system must be classified according to this taxonomy.
+Behavior not permitted here is forbidden.</p>
+<p>If there is a conflict, STATE-MACHINE.md and CORE-SEQUENCE.md take precedence.</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>The purpose of this taxonomy is to:</p>
+<ul>
+<li>Prevent silent failure</li>
+<li>Prevent unsafe retries</li>
+<li>Prevent authority from being exercised after ambiguity</li>
+<li>Ensure failures are visible, bounded, and non-destructive</li>
+</ul>
+<p>Errors are treated as <strong>states of knowledge</strong>, not merely exceptions.</p>
+<hr />
+<h2 id="2-error-classes">2. Error Classes</h2>
+<p>All errors fall into exactly one of the following classes:</p>
+<ol>
+<li><strong>Deterministic Errors</strong></li>
+<li><strong>Recoverable Errors</strong></li>
+<li><strong>Ambiguous Errors</strong></li>
+<li><strong>Fatal Errors</strong></li>
+<li><strong>Operator Errors</strong></li>
+</ol>
+<p>No error may belong to more than one class.</p>
+<hr />
+<h2 id="3-deterministic-errors">3. Deterministic Errors</h2>
+<h3 id="definition">Definition</h3>
+<p>Errors where:
+- The cause is known
+- The outcome is known
+- No irreversible action has occurred</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>Invalid bid format</li>
+<li>Bid below minimum</li>
+<li>Auction not open</li>
+<li>Missing configuration at startup</li>
+<li>Transaction construction failure before signing</li>
+<li>Inscription payload serialization failure</li>
+</ul>
+<h3 id="handling-rules">Handling Rules</h3>
+<ul>
+<li>Must be rejected immediately</li>
+<li>Must not alter canonical state</li>
+<li>May be retried if state permits</li>
+<li>Must be logged</li>
+</ul>
+<h3 id="authority-impact">Authority Impact</h3>
+<p>None.</p>
+<p>Deterministic errors do not consume authority.</p>
+<hr />
+<h2 id="4-recoverable-errors">4. Recoverable Errors</h2>
+<h3 id="definition_1">Definition</h3>
+<p>Errors where:
+- The cause is transient
+- No authority has been lost
+- Retry is explicitly permitted by the state machine</p>
+<h3 id="examples_1">Examples</h3>
+<ul>
+<li>Temporary RPC timeout</li>
+<li>Bitcoin Core temporarily unavailable</li>
+<li>Network interruption before broadcast</li>
+<li>Wallet locked but unlockable</li>
+<li>Pre-broadcast signing failure</li>
+</ul>
+<h3 id="handling-rules_1">Handling Rules</h3>
+<ul>
+<li>Retry is permitted only if:</li>
+<li>State allows it</li>
+<li>No ambiguity has been introduced</li>
+<li>Retries must be bounded</li>
+<li>Retries must be logged</li>
+</ul>
+<h3 id="authority-impact_1">Authority Impact</h3>
+<p>None, unless ambiguity is introduced.</p>
+<p>If ambiguity appears, reclassify immediately as Ambiguous Error.</p>
+<hr />
+<h2 id="5-ambiguous-errors-critical">5. Ambiguous Errors (Critical)</h2>
+<h3 id="definition_2">Definition</h3>
+<p>Errors where:
+- An irreversible action may have occurred
+- The system cannot determine the outcome with certainty
+- Authority may have been partially exercised</p>
+<p>Ambiguous errors are <strong>not failures</strong>.
+They are <strong>loss of certainty</strong>.</p>
+<h3 id="examples_2">Examples</h3>
+<ul>
+<li>Transaction broadcast may have succeeded, but txid is unknown</li>
+<li>Node crash immediately after <code>sendrawtransaction</code></li>
+<li>Network partition after broadcast</li>
+<li>Conflicting mempool observations</li>
+<li>Incomplete persistence after irreversible action</li>
+</ul>
+<h3 id="handling-rules_2">Handling Rules</h3>
+<ul>
+<li><strong>All retries are forbidden</strong></li>
+<li><strong>No competing action may be taken</strong></li>
+<li>System must assume the action <em>may</em> have occurred</li>
+<li>State must freeze authority</li>
+<li>Observation is the only allowed activity</li>
+</ul>
+<h3 id="authority-impact_2">Authority Impact</h3>
+<p>Authority is permanently reduced.</p>
+<p>Once ambiguity exists:
+- It cannot be repaired by time
+- It cannot be overridden by operators
+- It cannot be retried away</p>
+<p>This applies most critically to inscription broadcast.</p>
+<hr />
+<h2 id="6-fatal-errors">6. Fatal Errors</h2>
+<h3 id="definition_3">Definition</h3>
+<p>Errors where:
+- A core invariant is violated
+- Continuing execution risks corrupting history</p>
+<h3 id="examples_3">Examples</h3>
+<ul>
+<li>State transition not permitted by STATE-MACHINE.md</li>
+<li>Attempt to reopen bidding</li>
+<li>Attempt to finalize twice</li>
+<li>Attempt to broadcast a second inscription</li>
+<li>Database corruption</li>
+<li>Inconsistent persisted state</li>
+</ul>
+<h3 id="handling-rules_3">Handling Rules</h3>
+<ul>
+<li>Process must halt immediately</li>
+<li>Error must be logged loudly</li>
+<li>Operator intervention is required</li>
+</ul>
+<h3 id="authority-impact_3">Authority Impact</h3>
+<p>Execution authority is suspended until resolved.</p>
+<p>Fatal errors protect history by stopping the system.</p>
+<hr />
+<h2 id="7-operator-errors">7. Operator Errors</h2>
+<h3 id="definition_4">Definition</h3>
+<p>Errors introduced by human action.</p>
+<h3 id="examples_4">Examples</h3>
+<ul>
+<li>Invalid configuration</li>
+<li>Incorrect key provisioning</li>
+<li>Manual pause at incorrect boundary</li>
+<li>Attempted unsafe override</li>
+</ul>
+<h3 id="handling-rules_4">Handling Rules</h3>
+<ul>
+<li>Must be rejected if they violate invariants</li>
+<li>Must be logged with operator context</li>
+<li>Must never bypass system rules</li>
+</ul>
+<h3 id="authority-impact_4">Authority Impact</h3>
+<p>None, unless the action introduces ambiguity or violates invariants,
+in which case the error escalates to Fatal.</p>
+<hr />
+<h2 id="8-error-escalation-rules">8. Error Escalation Rules</h2>
+<p>Errors may escalate, but never downgrade.</p>
+<p>Permitted escalations:</p>
+<ul>
+<li>Deterministic → Recoverable</li>
+<li>Recoverable → Ambiguous</li>
+<li>Any → Fatal</li>
+</ul>
+<p>Forbidden transitions:</p>
+<ul>
+<li>Ambiguous → Recoverable</li>
+<li>Ambiguous → Deterministic</li>
+<li>Fatal → Any</li>
+</ul>
+<p>Once ambiguity or fatality exists, authority does not return automatically.</p>
+<hr />
+<h2 id="9-logging-requirements">9. Logging Requirements</h2>
+<p>All errors must be logged with:</p>
+<ul>
+<li>Error class</li>
+<li>Auction ID (if applicable)</li>
+<li>Current state</li>
+<li>Triggering action</li>
+<li>Timestamp</li>
+</ul>
+<p>Ambiguous and Fatal errors must additionally include:
+- What is known
+- What is unknown
+- What is now forbidden</p>
+<p>Logs are append-only.</p>
+<hr />
+<h2 id="10-design-principles">10. Design Principles</h2>
+<ul>
+<li>Absence of certainty is not permission</li>
+<li>Time passing is not evidence</li>
+<li>Retrying is a privilege, not a default</li>
+<li>Safety is preferred over liveness</li>
+<li>History must not be rewritten</li>
+</ul>
+<hr />
+<h2 id="11-summary-table">11. Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Error Class</th>
+<th>Retry Allowed</th>
+<th>Authority Lost</th>
+<th>Requires Halt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deterministic</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Recoverable</td>
+<td>Yes (bounded)</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Ambiguous</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Fatal</td>
+<td>No</td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Operator</td>
+<td>Depends</td>
+<td>Depends</td>
+<td>Depends</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12-non-goals">12. Non-Goals</h2>
+<p>This taxonomy does not:
+- Optimize for throughput
+- Minimize downtime
+- Hide failure from users
+- Resolve ambiguity heuristically</p>
+<p>Its sole purpose is correctness.</p>
+<hr />
+<h2 id="13-final-rule">13. Final Rule</h2>
+<p>If an error cannot be confidently classified:</p>
+<p><strong>Treat it as Ambiguous.</strong></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

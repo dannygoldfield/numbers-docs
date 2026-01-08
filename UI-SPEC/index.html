@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>User Interface Specification - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../API-SPEC/" class="nav-link">Application Programming Interface Specification — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../API-STATE-SHAPES/" class="nav-link">API State Shapes — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ARCHITECTURE/" class="nav-link">Architecture — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BIDDER/" class="nav-link">Who is a Bidder? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../BOOK-INTRO/" class="nav-link">Numbers Documentation — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CANONICAL-EXAMPLE/" class="nav-link">Canonical Examples — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CATALOG/" class="nav-link">Catalog — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CONFIG-REFERENCE/" class="nav-link">Configuration Reference — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../CORE-SEQUENCE/" class="nav-link">Core Sequence — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DATA-MODEL/" class="nav-link">Data Model — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEPLOYMENT/" class="nav-link">Deployment — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../DEV/" class="nav-link">DEV — Development and Implementation Contract — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ENVIRONMENT-DETERMINED-RENDERING/" class="nav-link">Environment-Determined Rendering — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ERROR-TAXONOMY/" class="nav-link">Error Taxonomy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../FAQ/" class="nav-link">FAQ — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../GLOSSARY/" class="nav-link">Glossary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../INVARIANTS/" class="nav-link">Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../JOKE/" class="nav-link">Is this a Joke? — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../KEY-MANAGEMENT-POLICY/" class="nav-link">Key Management Policy — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LAUNCH-CHECKLIST/" class="nav-link">Launch Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LIMITS-AND-CIRCUIT-BREAKERS/" class="nav-link">Limits and Circuit Breakers — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NAMING-CONVENTION/" class="nav-link">Naming Conventions — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-REQUIREMENTS/" class="nav-link">Non-Requirements — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../NON-TEXT-ARTIFACTS-REQUIRED/" class="nav-link">Non-Text Artifacts Required — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OBSERVABILITY/" class="nav-link">Observability — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../OPERATIONAL-RUNBOOK/" class="nav-link">Operational Runbook — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PLATFORM/" class="nav-link">Platform — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../POETICS/" class="nav-link">Poetics — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../PRD/" class="nav-link">Product Requirements Document — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../READ-THIS-FIRST/" class="nav-link">Read This First — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../ROADMAP/" class="nav-link">Roadmap — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SECRETS-AND-CONFIG/" class="nav-link">Secrets and Configuration — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SPEC-COMPLETENESS-CHECKLIST/" class="nav-link">Spec Completeness Checklist — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE-TABLE/" class="nav-link">State Machine — Canonical Table</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../STATE-MACHINE/" class="nav-link">State Machine — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../SUMMARY/" class="nav-link">Summary — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TARGET-AUDIENCE/" class="nav-link">Target Audience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TEST-VECTORS/" class="nav-link">Test Vectors — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TESTING/" class="nav-link">Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../THREAT-MODEL/" class="nav-link">Threat Model</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../TRANSITION-INVARIANTS/" class="nav-link">Transition Invariants — Numbers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">User Interface Specification</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WEBSITE-PRD/" class="nav-link">Website Product Requirements Document</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHAT-IF/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../WHY/" class="nav-link">What if you could own a number?</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Archive</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../archive/Alpha-Build-Schedule/" class="dropdown-item">Numbers Alpha Prototype Plan</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Daily-Log/" class="dropdown-item">Daily Log</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Penpot-Hierarchy/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Prompt-Notes/" class="dropdown-item">GROK NOTES</a>
+</li>
+                                    
+<li>
+    <a href="../archive/README%28old%29/" class="dropdown-item">Numbers</a>
+</li>
+                                    
+<li>
+    <a href="../archive/SLOGANS/" class="dropdown-item">SLOGANS</a>
+</li>
+                                    
+<li>
+    <a href="../archive/Settlement-Art/" class="dropdown-item">Settlement Art Experience — Artist Brief</a>
+</li>
+                                    
+<li>
+    <a href="../archive/WHY%28old%29/" class="dropdown-item">WHY: Number Theory</a>
+</li>
+                                    
+<li>
+    <a href="../archive/mdbook_outline/" class="dropdown-item">Numbers mdBook — Proposed Outline</a>
+</li>
+                                    
+<li>
+    <a href="../archive/rendering_map/" class="dropdown-item">Rendering Models — Reference Map</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../TRANSITION-INVARIANTS/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../WEBSITE-PRD/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#user-interface-specification" class="nav-link">User Interface Specification</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-purpose-of-the-interface" class="nav-link">1. Purpose of the Interface</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-page-model" class="nav-link">2. Page Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-initialization-and-refresh-behavior" class="nav-link">3. Initialization and Refresh Behavior</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-system-states-ui-states" class="nav-link">4. System States → UI States</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-inter-auction-pause" class="nav-link">5. Inter-Auction Pause</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#6-letline-system-voice" class="nav-link">6. Letline (System Voice)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#7-wallet-connection" class="nav-link">7. Wallet Connection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#8-bid-interaction" class="nav-link">8. Bid Interaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#9-auction-transitions" class="nav-link">9. Auction Transitions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#10-history-and-scrolling" class="nav-link">10. History and Scrolling</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#11-menu" class="nav-link">11. Menu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#12-about-and-docs-sections" class="nav-link">12. About and Docs Sections</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#13-metadata-display-policy" class="nav-link">13. Metadata Display Policy</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#14-destination-semantics" class="nav-link">14. Destination Semantics</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#15-transaction-references" class="nav-link">15. Transaction References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#16-non-goals" class="nav-link">16. Non-Goals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#17-guiding-principle" class="nav-link">17. Guiding Principle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="user-interface-specification">User Interface Specification</h1>
+<p>This document defines the user interface behavior for Numbers.</p>
+<p>It constrains design decisions.<br />
+It does not describe visual style.</p>
+<p>If there is a conflict between this document and any other specification,<br />
+<code>ARCHITECTURE.md</code> and <code>CORE-SEQUENCE.md</code> take precedence.</p>
+<hr />
+<h2 id="1-purpose-of-the-interface">1. Purpose of the Interface</h2>
+<p>The Numbers interface exists to:</p>
+<ul>
+<li>Expose system state accurately</li>
+<li>Allow participation only where the system allows it</li>
+<li>Avoid interpretation, ranking, or narrative framing</li>
+</ul>
+<p>The interface reflects outcomes.<br />
+It does not explain or justify them.</p>
+<hr />
+<h2 id="2-page-model">2. Page Model</h2>
+<ul>
+<li>The site consists of <strong>one continuous primary page</strong></li>
+<li>There are no routes or modes</li>
+<li>Navigation changes <strong>scroll position</strong>, not context</li>
+</ul>
+<p>Content sections (e.g. About, Docs) do not constitute modes<br />
+and do not alter system state.</p>
+<p>The page always initializes at <strong>the current auction</strong>.</p>
+<p>There is no deep-linking to past or future numbers.</p>
+<hr />
+<h2 id="3-initialization-and-refresh-behavior">3. Initialization and Refresh Behavior</h2>
+<ul>
+<li>On page load, the interface shows the <strong>current auction</strong></li>
+<li>On page refresh, the interface resets to the current auction</li>
+<li>Scroll position is not preserved</li>
+<li>Tapping the “Numbers” logo behaves identically to refresh</li>
+</ul>
+<p>Numbers always reasserts “now.”</p>
+<hr />
+<h2 id="4-system-states-ui-states">4. System States → UI States</h2>
+<p>The interface must represent all system states explicitly.</p>
+<h3 id="states">States</h3>
+<ul>
+<li>Open Auction</li>
+<li>Closing / Resolving</li>
+<li>Awaiting Settlement</li>
+<li>Finalized</li>
+<li>Inscribing</li>
+<li>Inscribed</li>
+<li>Degraded</li>
+</ul>
+<p>The Inscribed state refers only to canonical inscriptions<br />
+produced by the Numbers system.</p>
+<p>No UI-only states may be introduced.</p>
+<hr />
+<h2 id="5-inter-auction-pause">5. Inter-Auction Pause</h2>
+<p>Between auctions:</p>
+<ul>
+<li>The <strong>next auction number</strong> is visible but inactive</li>
+<li>Bid input, bid button, and keyboard are visible but inactive</li>
+<li>Keyboard reads <code>1234567890</code></li>
+<li>Auction timer displays <code>12:34:56</code> in an inactive state</li>
+<li>Touching bidding elements has no effect</li>
+<li>Menu remains active</li>
+</ul>
+<p>Timing values shown during the inter-auction pause are presentation defaults<br />
+and do not define protocol semantics.</p>
+<p>Liveness is communicated only through:
+- Countdown
+- Letline (system voice)</p>
+<hr />
+<h2 id="6-letline-system-voice">6. Letline (System Voice)</h2>
+<ul>
+<li>The Letline is a single-line textual element</li>
+<li>It represents the system voice of “123456789 and 0”</li>
+<li>It is ambient and impersonal</li>
+</ul>
+<p>Rules:
+- Letline never provides individual user feedback
+- Letline messaging may change over time
+- Typing behavior (speed, pauses, reversal) is presentation-only</p>
+<p>Example messages:
+- “stand by for the next auction”
+- “What if you could own a number?”</p>
+<hr />
+<h2 id="7-wallet-connection">7. Wallet Connection</h2>
+<ul>
+<li>Viewing the site never requires a wallet</li>
+<li>Wallet connection is required <strong>only</strong> to submit a bid</li>
+<li>Wallet connection is triggered only by attempting to place a bid</li>
+</ul>
+<p>During inter-auction pauses:
+- Wallet connection is unavailable</p>
+<p>Wallet connections:
+- Persist across auctions
+- Persist until explicitly disconnected by the user</p>
+<p>Disconnect:
+- Available only via the menu
+- No ceremony or emphasis</p>
+<hr />
+<h2 id="8-bid-interaction">8. Bid Interaction</h2>
+<h3 id="successful-bid">Successful Bid</h3>
+<ul>
+<li>No confirmation message</li>
+<li>No animation</li>
+<li>No toast</li>
+<li>Confirmation occurs only through reflected state</li>
+</ul>
+<h3 id="failed-bid">Failed Bid</h3>
+<ul>
+<li>Failure is indicated inline at the bid input</li>
+<li>Message is brief, neutral, and self-clearing</li>
+<li>Letline is not used for error messaging</li>
+</ul>
+<hr />
+<h2 id="9-auction-transitions">9. Auction Transitions</h2>
+<ul>
+<li>Auction start and end transitions are immediate</li>
+<li>No animation</li>
+<li>No acknowledgement layer</li>
+<li>No auto-scroll</li>
+<li>No notifications</li>
+</ul>
+<p>State changes are presented as facts, not events.</p>
+<hr />
+<h2 id="10-history-and-scrolling">10. History and Scrolling</h2>
+<ul>
+<li>The current auction is always at the top</li>
+<li>Scrolling downward reveals prior auctions</li>
+<li>Prior auctions are non-interactive</li>
+<li>Prior auctions are visually quieter than the live auction</li>
+</ul>
+<p>The home page is a vertical sequence:
+- Present at the top
+- Past below</p>
+<hr />
+<h2 id="11-menu">11. Menu</h2>
+<p>The menu contains exactly five items:</p>
+<ol>
+<li>Jump to live auction</li>
+<li>Jump to recent results</li>
+<li>About / What is Numbers</li>
+<li>Docs / How it works</li>
+<li>Connect / Disconnect wallet</li>
+</ol>
+<p>The menu:
+- Does not change context
+- Does not introduce modes
+- Is always accessible</p>
+<p>Menu interaction never alters auction state<br />
+or temporal position.</p>
+<hr />
+<h2 id="12-about-and-docs-sections">12. About and Docs Sections</h2>
+<ul>
+<li>About and Docs exist <strong>within the same page</strong></li>
+<li>Menu items scroll to these sections</li>
+<li>Content expands inline</li>
+<li>No overlays, modals, or windows</li>
+</ul>
+<p>Disclosure uses simple expansion.<br />
+Scroll continuity is preserved.</p>
+<hr />
+<h2 id="13-metadata-display-policy">13. Metadata Display Policy</h2>
+<p>The interface displays only canonical inscriptions<br />
+as defined by the system.</p>
+<h3 id="live-auction-and-recent-results">Live Auction and Recent Results</h3>
+<ul>
+<li>No addresses displayed</li>
+<li>No ownership implied</li>
+</ul>
+<h3 id="detailed-history-views">Detailed History Views</h3>
+<ul>
+<li>Addresses may be displayed in truncated form</li>
+<li>Addresses are presented as data, not identity</li>
+</ul>
+<hr />
+<h2 id="14-destination-semantics">14. Destination Semantics</h2>
+<p>Every auction resolves to a destination.</p>
+<ul>
+<li>Successful auction:</li>
+<li>
+<p>Destination = winner’s address</p>
+</li>
+<li>
+<p>No-bid or failed-settlement auction:</p>
+</li>
+<li>Destination = NullSteward</li>
+</ul>
+<p>NullSteward:
+- Is a system-controlled destination
+- Uses a new address per occurrence
+- Is intentionally unspendable
+- Is not controlled by any participant</p>
+<p>Bid amount for no-bid outcomes is recorded as <code>0</code>.</p>
+<hr />
+<h2 id="15-transaction-references">15. Transaction References</h2>
+<ul>
+<li>Transaction ID and satpoint are treated as <strong>separate affordances</strong></li>
+<li>They are grouped visually but not merged conceptually</li>
+<li>Each links to its canonical external viewer</li>
+<li>They are never embedded or interpreted by Numbers</li>
+</ul>
+<p>Transaction references are shown only<br />
+for canonical system outcomes.</p>
+<hr />
+<h2 id="16-non-goals">16. Non-Goals</h2>
+<p>The interface does not provide:</p>
+<ul>
+<li>User accounts</li>
+<li>Personalization</li>
+<li>Notifications</li>
+<li>Market data</li>
+<li>Rankings</li>
+<li>Rarity signals</li>
+<li>Social features</li>
+<li>Analytics dashboards</li>
+</ul>
+<p>Any feature not explicitly described here is out of scope.</p>
+<hr />
+<h2 id="17-guiding-principle">17. Guiding Principle</h2>
+<p>The interface must never imply meaning<br />
+beyond recorded outcomes.</p>
+<p>Numbers records.<br />
+The interface reflects.<br />
+Viewers interpret.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
