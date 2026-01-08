@@ -1,0 +1,95 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Missing invariant A: \'93Payment acceptance\'94 is not fully defined\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You have said:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 funds are held\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 settlement is final\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 revenue recognition waits for inscription\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 But there is no single invariant that says:\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Once payment is accepted, the system must either deliver an inscription or issue compensation. No third outcome exists.\
+This needs to be an invariant, not prose.\
+Why it matters:\uc0\u8232 Without this, a future implementation can \'93stall\'94 in a limbo state and still technically follow the spec.\
+This invariant becomes explicit only 
+\f2\i after
+\f1\i0  the refund policy is merged. Right now it is implicit.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 Missing invariant B: Auction finality is independent of economic compensation\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You believe this strongly, but it is not locked as an invariant.\
+You need something like:\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Compensation events must not affect auction numbering, resolution, ownership, or sequencing.\
+Why it matters:\uc0\u8232 Without this, a well-meaning refactor could treat refunded auctions as \'93null\'94 or \'93void\'94 later.\
+This one is subtle and dangerous if left unstated.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 Missing invariant C: System must not accept new bids while refund ambiguity exists\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You\'92ve said this conversationally. It is not stated as a hard rule.\
+This needs to exist as:\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 If any refund is in Failed or Ambiguous state, the system must pause at the next auction boundary.\
+Why it matters:\uc0\u8232 This is fairness to future bidders and protects you from operating while compromised.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 Ambiguity 1: \'93Ambiguity\'94 itself is underspecified\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You rely heavily on the word \'93ambiguous,\'94 but you do not define it mechanistically in one place.\
+Right now ambiguity is:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 sometimes observational\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 sometimes temporal\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 sometimes epistemic\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 You need one crisp rule:\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Ambiguity means the system cannot prove whether an authority-bearing action occurred.\
+That definition should be referenced everywhere ambiguity appears.\
+Without it, LLMs and humans will interpret it emotionally instead of mechanically.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 Ambiguity 2: Operator knowledge vs system knowledge\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You are personally confident you will \'93know\'94 what happened in many edge cases.\
+The system must behave as if 
+\f0\b \strokec2 you know nothing beyond what it can prove
+\f1\b0 \strokec2 .\
+This boundary is not stated explicitly enough.\
+You need something like:\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Operator belief or external knowledge must not affect system state transitions.\
+This protects you from yourself on a bad day.\
+}
